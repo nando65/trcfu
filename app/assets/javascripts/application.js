@@ -10,7 +10,14 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
 //= require jquery
+//= require main
+//= require AnimOnScroll
+//= require masonry.pkgd.min.js
+//= require modernizr.custom.js
+//= require classie
+//= require imagesloaded
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
