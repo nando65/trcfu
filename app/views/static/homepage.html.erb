@@ -60,6 +60,18 @@
         <div class="col-lg-8 col-lg-offset-2">
           <h1>trcfu</h1>
           <h2>All courses, one place</h2>
+
+     <!--      <%= 'Male' %>
+          <%= check_box_tag 'accept' %>
+
+          <div class="btn-group" data-toggle="buttons-radio">
+    <button type="button" class="btn btn-primary">Left</button></br></br>
+    <button type="button" class="btn btn-primary">Middle</button></br></br>
+    <button type="button" class="btn btn-primary">Right</button>
+
+</div> -->
+<input type="hidden" id="buttonvalue"/>
+
           <div class="spacer"></div>
           <i class="fa fa-angle-down"></i>
         </div>
@@ -70,24 +82,28 @@
   <!-- WELCOME SECTION -->
     <div class="container">
       <div class="row mt">
-        <div class="col-lg-8">
-          <h1>We build websites & apps that people love!</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-        </div>
-        <div class="col-lg-4">
-          <p class="pull-right"><br><button type="button" class="btn btn-green">Start Your Project Now</button></p>
+        <div class="col-lg-12">
+          <h1 class="text-center">Tell us about you and we'll recommend the best course for you!</h1>
+          <p class="text-center">We have machine learning algorithm that allows us to tailor the course offerings that best suit your interests and skills</p>
+
+        <br><button type="button" class="btn btn-primary center-block btn-green btn-lg">Personalize my menu</button>
         </div>
       </div><!-- /row -->
     </div><!-- /.container -->
+
 
     <!-- PORTFOLIO SECTION -->
     <div id="portfolio">
       <div class="container"
         <div class="row mt">
         <ul class="grid effect-2" id="grid">
-          <li><a href="singleproject.html"><img src="assets/udemy course 1.png"></a></li>
+
           <!-- <li><a href="singleproject.html"><img src="https://udemy-images.udemy.com/course/240x135/341502_a7f5_2.jpg"></a></li> -->
-          <li><a href="singleproject.html"><img src="assets/udemy course 2.png"></a></li>
+           <% @all_links.each do |a| %>
+            <% b=a.link.split('</script><iframe')[0]+'</script>'%>
+            <li><%= b.html_safe%></li>
+          <% end %>
+         <!--  <li><a href="singleproject.html"><img src="assets/udemy course 2.png"></a></li>
           <li><a href="singleproject.html"><img src="assets/udemy course 3.png"></a></li>
           <li><a href="singleproject.html"><img src="assets/udemy course 4.png"></a></li>
           <li><a href="singleproject.html"><img src="assets/udemy course 5.png"></a></li>
@@ -100,7 +116,7 @@
           <li><a href="singleproject.html"><img src="assets/udemy course 1.png"></a></li>
           <li><a href="singleproject.html"><img src="assets/udemy course 4.png"></a></li>
           <li><a href="singleproject.html"><img src="assets/udemy course 2.png"></a></li>
-          <li><a href="singleproject.html"><img src="assets/udemy course 3.png"></a></li>
+          <li><a href="singleproject.html"><img src="assets/udemy course 3.png"></a></li> -->
         </ul>
         </div><!-- row -->
       </div><!-- container -->
